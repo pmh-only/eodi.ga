@@ -1,0 +1,211 @@
+* {
+  font-family: 'Nanum Barun Gothic', sans-serif;
+}
+
+h2, p {
+  margin: 0px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.toplid {
+  background: linear-gradient(90deg, rgba(73,150,240,1) 0%, rgba(0,212,255,1) 100%);
+  width: 100%;
+  height: 3px;
+}
+
+.navbar {
+  width: 100%;
+  height: auto;
+  padding: 10px 20px;
+  border-bottom: solid 1px rgb(233, 233, 233);
+}
+
+.logo {
+  height: 40px;
+  vertical-align: middle;
+}
+
+.container {
+  clip-path: ellipse(90% 49% at 50% 40%);
+  background-image: url('/src/wallpaper.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 30px;
+  text-align: center;
+}
+
+.container > h2, .container p {
+  color: white;
+}
+
+.urlbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0px 0px 0px;
+}
+
+.urlbar > input[name="url"] {
+  background-color: white;
+  border: solid 2px rgb(233, 233, 233);
+  border-right: none;
+  border-radius: 30px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  padding: 10px 20px;
+  margin: 10px 0px;
+  width: 70%;
+  height: 20px;
+  max-width: 500px;
+  box-shadow: none;
+  transition: box-shadow .3s ease-in-out;
+}
+
+.urlbar > input[name="url"]:hover {
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
+}
+
+.urlbar > input[name="url"]:focus {
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
+}
+
+.urlbar > button[type="submit"] {
+  background-color: white;
+  border: solid 2px rgb(233, 233, 233);
+  border-radius: 30px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-left-width: 1px;
+  padding: 13px 27px 27px 13px;
+  width: 20px;
+  height: 20px;
+  box-shadow: none;
+  transition: box-shadow .1s ease-out;
+}
+
+.urlbar > button[type="submit"]:hover {
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
+}
+
+.urlbar > button[type="submit"]:focus {
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
+}
+
+.options > input[name="option"] {
+  position: absolute;
+  left: -100vw;
+}
+
+.options > label {
+  color: white;
+  cursor: pointer;
+  text-decoration: underline dotted;
+}
+
+.options > input#option:checked ~ label {
+  position: absolute;
+  left: -100vw;
+}
+
+.options > .option-cnt {
+  height: 0px;
+  overflow: hidden;
+}
+
+.options > input#option:checked ~ .option-cnt {
+  position: unset;
+  height: auto;
+}
+
+.option-cnt {
+  position: absolute;
+  left: -100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.option-inline {
+  background-color: white;
+  width: 70%;
+  max-width: 550px;
+  padding: 10px;
+  border: solid 2px rgb(233, 233, 233);
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
+}
+
+.option-inline > input[name="passwd"] {
+  width: 50%;
+  background-color: white;
+  border: solid 2px rgb(233, 233, 233);
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 0px 0px 5px 10px;
+  box-shadow: none;
+  transition: box-shadow .3s ease-in-out;
+}
+
+
+/* from https://codepen.io/chriscoyier/pen/JjozJLv */
+.switch {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.switch-input {
+  display: none;
+}
+
+.switch-label {
+  display: block;
+  width: 48px;
+  height: 24px;
+  text-indent: -150%;
+  clip: rect(0 0 0 0);
+  color: transparent;
+  user-select: none;
+}
+
+.switch-label::before,
+.switch-label::after {
+  content: "";
+  display: block;
+  position: absolute;
+  cursor: pointer;
+}
+
+.switch-label::before {
+  width: 100%;
+  height: 100%;
+  background-color: #dedede;
+  border-radius: 9999em;
+  -webkit-transition: background-color 0.25s ease;
+  transition: background-color 0.25s ease;
+}
+
+.switch-label::after {
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.45);
+  -webkit-transition: left 0.25s ease;
+  transition: left 0.25s ease;
+}
+
+.switch-input:checked + .switch-label::before {
+  background: linear-gradient(90deg, rgba(73,150,240,1) 0%, rgba(0,212,255,1) 100%);
+}
+
+.switch-input:checked + .switch-label::after {
+  left: 24px;
+}
