@@ -10,7 +10,3 @@
 	path = public/3rd/nanum
 	url = https://github.com/hiun/NanumBarunGothic.git
 	branch = master
-[submodule "public/3rd/cryptojs"]
-	path = public/3rd/cryptojs
-	url = https://github.com/sytelus/CryptoJS
-	branch = master
