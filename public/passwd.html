@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/_/3rd/normalize/normalize.css">
+    <link rel="stylesheet" href="/_/3rd/nanum/nanumbarungothic.css">
+    <link rel="stylesheet" href="/_/src/main.css">
+    <title>어디.ga - 안전한 단축 주소 생성기</title>
+  </head>
+  <body>
+    <header>
+      <div class="toplid"></div>
+      <nav class="navbar">
+        <a href="/"><img src="/_/src/logo.png" alt="eodi.ga" class="logo"> alpha</a>
+      </nav>
+    </header>
+
+    <article>
+      <div class="container">
+        <h2 class="title">링크 잠금 해제</h2>
+        <p class="alert">링크가 잠겨있습니다. 비밀번호를 입력해 주세요.</p>
+
+        <form onsubmit="return false" id="locked">
+          <div class="urlbar">
+            <input type="password" name="url" placeholder="비밀번호 입력" autofocus autocomplete="off">
+            <button type="submit"><i class="fas fa-arrow-right"></i></button>
+          </div>
+        </form>
+      </div>
+    </article>
+
+    <script src="/_/3rd/cryptojs/crypto-js.js"></script>
+    <script src="/_/3rd/fontawesome/js/all.js"></script>
+    <script src="/_/src/main.js"></script>
+  </body>
+</html>

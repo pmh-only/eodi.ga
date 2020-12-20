@@ -6,6 +6,8 @@
   "author": "Park Min Hyeok <pmhstudio.pmh@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "crypto-js": "^4.0.0",
+    "crypto-random-string": "^3.3.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "knex": "^0.21.14",

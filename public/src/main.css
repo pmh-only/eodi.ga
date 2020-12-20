@@ -2,6 +2,11 @@
   font-family: 'Nanum Barun Gothic', sans-serif;
 }
 
+a {
+  color: unset;
+  text-decoration: none;
+}
+
 h2, p {
   margin: 0px;
 }
@@ -30,7 +35,7 @@ body {
 
 .container {
   clip-path: ellipse(90% 49% at 50% 40%);
-  background-image: url('/src/wallpaper.png');
+  background-image: url('/_/src/wallpaper.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -40,6 +45,11 @@ body {
 
 .container > h2, .container p {
   color: white;
+}
+
+.alert > a {
+  color: white;
+  text-decoration: underline dotted white;
 }
 
 .urlbar {
@@ -85,6 +95,7 @@ body {
   height: 20px;
   box-shadow: none;
   transition: box-shadow .1s ease-out;
+  cursor: pointer;
 }
 
 .urlbar > button[type="submit"]:hover {
@@ -151,6 +162,10 @@ body {
   transition: box-shadow .3s ease-in-out;
 }
 
+.muted {
+  color: gray;
+  font-size: 12px;
+}
 
 /* from https://codepen.io/chriscoyier/pen/JjozJLv */
 .switch {

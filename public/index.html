@@ -3,25 +3,25 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/3rd/normalize/normalize.css">
-    <link rel="stylesheet" href="/3rd/nanum/nanumbarungothic.css">
-    <link rel="stylesheet" href="/src/main.css">
+    <link rel="stylesheet" href="/_/3rd/normalize/normalize.css">
+    <link rel="stylesheet" href="/_/3rd/nanum/nanumbarungothic.css">
+    <link rel="stylesheet" href="/_/src/main.css">
     <title>어디.ga - 안전한 단축 주소 생성기</title>
   </head>
   <body>
     <header>
       <div class="toplid"></div>
       <nav class="navbar">
-        <img src="/src/logo.png" alt="eodi.ga" class="logo">
+        <a href="/"><img src="/_/src/logo.png" alt="eodi.ga" class="logo"> alpha</a>
       </nav>
     </header>
 
     <article>
       <div class="container">
-        <h2>안전한 URL 단축기</h2>
-        <p>비밀번호, 켑챠 등을 통해 안전한 URL을 만들어 보세요</p>
+        <h2 class="title">안전한 URL 단축기</h2>
+        <p class="alert">비밀번호, 캡차 등을 통해 안전한 URL을 만들어 보세요.</p>
 
-        <form action="/" method="POST">
+        <form action="/_?type=demo" method="POST">
           <div class="urlbar">
             <input type="url" name="url" placeholder="단축할 URL을 입력하세요 (예: https://example.com)" autofocus autocomplete="off">
             <button type="submit"><i class="fas fa-arrow-right"></i></button>
@@ -32,19 +32,20 @@
             <div class="option-cnt">  
               <div class="option-inline">
                 <div class="switch">
-                  <input id="captcha" type="checkbox" class="switch-input" autocomplete="off"/>
+                  <input name="captcha" id="captcha" type="checkbox" class="switch-input" autocomplete="off" disabled/>
                   <label for="captcha" class="switch-label">Switch</label>
                 </div>
-                <label for="captcha">켑챠 요구</label>
+                <label for="captcha">캡차 요구(제작중)</label>
 
                 <div class="switch">
-                  <input id="passwd-need" type="checkbox" class="switch-input" autocomplete="off"/>
-                  <label for="passwd-need" class="switch-label">Switch</label>
+                  <input name="passwd_need" id="passwd_need" type="checkbox" class="switch-input" autocomplete="off"/>
+                  <label for="passwd_need" class="switch-label">Switch</label>
                 </div>
-                <label for="passwd-need">비밀번호 요구</label>
+                <label for="passwd_need">비밀번호 요구</label>
 
-                <input type="password" name="passwd" placeholder="비밀번호를 입력하세요 (aes256)" autocomplete="off">
+                <input type="password" name="passwd" placeholder="비밀번호를 입력하세요" autocomplete="off">
                 <br />
+                <label class="muted" for="passwd">*비밀번호는 서버에 저장되지 않습니다 (aes방식)</label>
               </div>
             </div>
           </div>
@@ -52,7 +53,7 @@
       </div>
     </article>
 
-    <script src="/src/main.js"></script>
-    <script src="/3rd/fontawesome/js/all.js"></script>
+    <script src="/_/3rd/fontawesome/js/all.js"></script>
+    <script src="/_/src/main.js"></script>
   </body>
 </html>
