@@ -36,17 +36,13 @@ window.onload = function () {
 }
 
 function isURL (url) {
-  const strRegexp =
-    "^((https|http|ftp|rtsp|mms)?://)"
-    + "?(([0-9a-z_!~*'().&=+$%-]+: )?[0-9a-z_!~*'().&=+$%-]+@)?"
-    + "(([0-9]{1,3}\.){3}[0-9]{1,3}"
-    + "|([0-9a-z_!~*'()-]+\.)*"
-    + "([0-9a-z][0-9a-z-]{0,61})?[0-9a-z]\."
-    + "[a-z]{2,6})(:[0-9]{1,4})?((/?)|"
-    + "(/[0-9a-z_!~*'().;?:@&=+$,%#-]+)+/?)$"
-
-  const regexp = new RegExp(strRegexp)
-  return regexp.test(url)
+  const pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
+    '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // domain name
+    '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
+    '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path
+    '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
+    '(\\#[-a-z\\d_]*)?$','i') // fragment locator
+  return !!pattern.test(url)
 }
 
 function getUrlParameter(name) {
