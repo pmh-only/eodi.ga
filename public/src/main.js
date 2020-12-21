@@ -33,8 +33,6 @@ window.onload = function () {
       } else window.location.replace(url)
     }
   }
-
-  window.history.replaceState({}, document.title, '/')
 }
 
 function isURL (url) {
@@ -56,4 +54,9 @@ function getUrlParameter(name) {
   var regex = new RegExp('[\\?&]' + name + '=([^&#]*)')
   var results = regex.exec(window.location.search)
   return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '))
+}
+
+function captcha () {
+  document.forms[0].action = '/_?type=captcha&id=' + getUrlParameter('captcha')
+  document.forms[0].submit()
 }
